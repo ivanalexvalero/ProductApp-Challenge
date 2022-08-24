@@ -8,21 +8,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--No Home View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NoHomeViewController" customModule="ProductApp_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ProductApp_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lC3-4o-uEw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <segue destination="W8I-PI-duO" kind="embed" id="Mc4-io-56c"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="lC3-4o-uEw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3PH-X9-4El"/>
+                            <constraint firstItem="lC3-4o-uEw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CfK-qh-Ue1"/>
+                            <constraint firstItem="lC3-4o-uEw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JZZ-A9-O8R"/>
+                            <constraint firstItem="lC3-4o-uEw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iaS-vq-lkM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wEa-Tn-PTY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="79.6875"/>
+        </scene>
+        <!--Root Page View Controller-->
+        <scene sceneID="o0l-LQ-puU">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="W8I-PI-duO" customClass="RootPageViewController" customModule="ProductApp_Challenge" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6n-1f-Ohm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xNr-De-KoA">

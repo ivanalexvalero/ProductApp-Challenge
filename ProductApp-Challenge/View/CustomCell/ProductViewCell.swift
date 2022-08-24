@@ -18,8 +18,9 @@ class ProductViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func  SetUpCell(model: ModelProduct) {
-        productNameLabel.text = model.nameProduct
+    func  SetUpCell(model: Drinks.ResultDrinks) {
+        productNameLabel.text = model.strDrink
+        print("Name", productNameLabel.text)
     }
     
 }
