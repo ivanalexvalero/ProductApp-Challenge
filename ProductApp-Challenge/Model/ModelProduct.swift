@@ -8,10 +8,33 @@
 import Foundation
 
 struct Drinks: Codable {
-    let drinks: [ResultDrinks]
+    var drinks: [ResultDrinks]
+    
+    enum CodingKeys: String, CodingKey {
+        case drinks
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+  
+        self.drinks = try container.decode([ResultDrinks].self, forKey: .drinks)
+    }
+    
+    
     
     struct ResultDrinks: Codable {
-        let strDrink: String
+        var strDrink: String
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+      
+            self.strDrink = try container.decode(String.self, forKey: .strDrink)
+            
+      //            if let id = try? container.decode(Int.self, forKey: .id){
+      //                self.id = id
+      //            }else {
+      //                self.id = nil
+                  }
     }
 }
 

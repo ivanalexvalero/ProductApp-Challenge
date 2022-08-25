@@ -45,7 +45,7 @@ class ServiceTest {
 //            self.drinksList = drinks
             if let drinks = drinks {
                 print(drinks)
-                
+//                drinksList.first?.strDrink = drinks.drinks as String
             } else {
                 print("Failed to pase")
             }

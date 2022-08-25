@@ -41,13 +41,16 @@ struct RequestModel {
     }
     
     enum Endpoints: String   {
-
-           case drinkName = "/search.php?f=a"
-           case empty = ""
+//        /random.php
+//        /search.php?f=a
+        case drinks = "/search.php?f=a"
+        case text = "/posts"
+        case empty = ""
     }
     
     enum URLBase: String {
         case drinks = "https://www.thecocktaildb.com/api/json/v1/1"
+//        case text = "https://jsonplaceholder.typicode.com"
     }
     
     

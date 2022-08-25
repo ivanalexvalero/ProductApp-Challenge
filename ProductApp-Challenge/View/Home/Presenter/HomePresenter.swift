@@ -11,24 +11,39 @@ protocol HomeViewProtocol: AnyObject{
     func getData(list: [[Any]])
 }
 
-class HomePresenter {
+@MainActor class HomePresenter {
     
     var provider: HomeProviderProtocol
     weak var delegate: HomeViewProtocol?
-    private var drinkList: [[Any]] = []
+    var drinkList: [[Any]] = []
     
     init(delegate: HomeViewProtocol ,provider: HomeProviderProtocol = HomeProvider()) {
         self.provider = provider
         self.delegate = delegate
     }
     
-    func getList() async {
+//    func getList() async {
+//        drinkList.removeAll()
+//        
+//        do {
+//            let drinks = try await provider.getDrinks().drinks
+//            
+//            drinkList.append(drinks)
+//            
+//            delegate?.getData(list: drinkList)
+//            
+//        } catch {
+//            print(error)
+//        }
+//    }
+    
+    func getTextList() async {
         drinkList.removeAll()
         
         do {
-            let drinks = try await provider.getDrinks().drinks
+            let listText = try await provider.getText().drinks
             
-            drinkList.append(drinks)
+            drinkList.append(listText)
             
             delegate?.getData(list: drinkList)
             

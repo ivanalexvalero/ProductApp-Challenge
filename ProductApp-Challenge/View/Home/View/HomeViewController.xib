@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ProductApp_Challenge" customModuleProvider="target">
             <connections>
-                <outlet property="tableViewProducts" destination="NXm-3J-PP3" id="ofx-WF-Eet"/>
+                <outlet property="tableViewProducts" destination="0Wr-qk-MmP" id="H8n-Ux-Csj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,21 +22,26 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcx-3P-mkL">
                     <rect key="frame" x="20" y="44" width="374" height="680"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NXm-3J-PP3">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E6e-Pd-bO0">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="680"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <connections>
-                                <outlet property="dataSource" destination="-1" id="GCG-js-tY5"/>
-                                <outlet property="delegate" destination="-1" id="zWj-TU-gcm"/>
-                            </connections>
-                        </tableView>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Wr-qk-MmP">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="680"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="vDP-lU-F73"/>
+                                        <outlet property="delegate" destination="-1" id="6Vk-mC-F1E"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="NXm-3J-PP3" secondAttribute="trailing" id="M1w-7I-LsU"/>
-                        <constraint firstAttribute="bottom" secondItem="NXm-3J-PP3" secondAttribute="bottom" id="j7u-tC-Dtc"/>
-                        <constraint firstItem="NXm-3J-PP3" firstAttribute="top" secondItem="dcx-3P-mkL" secondAttribute="top" id="jee-IF-ilg"/>
-                        <constraint firstItem="NXm-3J-PP3" firstAttribute="leading" secondItem="dcx-3P-mkL" secondAttribute="leading" id="lYN-P5-ZkI"/>
+                        <constraint firstItem="E6e-Pd-bO0" firstAttribute="top" secondItem="dcx-3P-mkL" secondAttribute="top" id="2HL-FU-w28"/>
+                        <constraint firstAttribute="bottom" secondItem="E6e-Pd-bO0" secondAttribute="bottom" id="ABm-TT-SOJ"/>
+                        <constraint firstItem="E6e-Pd-bO0" firstAttribute="leading" secondItem="dcx-3P-mkL" secondAttribute="leading" id="MF8-7h-6Sc"/>
+                        <constraint firstAttribute="trailing" secondItem="E6e-Pd-bO0" secondAttribute="trailing" id="wce-VY-1o9"/>
                     </constraints>
                 </view>
             </subviews>

@@ -10,11 +10,12 @@ import UIKit
 
 @MainActor
 class ServiceLayer {
-    static func callService<T: Decodable>(_ requestModel: RequestModel, _ modelType: T.Type) async throws -> T {
+    static func callService(_ requestModel: RequestModel) async throws -> Drinks{
         
         //Get query parameters
         var serviceUrl = URLComponents(string: requestModel.getURL())
-        serviceUrl?.queryItems = buildQueryItems(params: requestModel.queryItems ?? [:])
+        print("service", serviceUrl)
+//        serviceUrl?.queryItems = buildQueryItems(params: requestModel.queryItems ?? [:])
 //        serviceUrl?.queryItems?.append(URLQueryItem(name: "apikey", value: Constants.apiKey))
         
         
@@ -38,7 +39,7 @@ class ServiceLayer {
             
             let decoder = JSONDecoder()
             do {
-                let decodeData = try decoder.decode(T.self, from: data)
+                let decodeData = try decoder.decode(Drinks.self, from: data)
                 return decodeData
             }catch {
                 print(error)
@@ -52,10 +53,10 @@ class ServiceLayer {
         
     }
     
-    static func buildQueryItems(params: [String:String]) -> [URLQueryItem] {
-        let items = params.map({URLQueryItem(name: $0, value: $1)})
-        return items
-    }
+//    static func buildQueryItems(params: [String:String]) -> [URLQueryItem] {
+//        let items = params.map({URLQueryItem(name: $0, value: $1)})
+//        return items
+//    }
     
     
 }

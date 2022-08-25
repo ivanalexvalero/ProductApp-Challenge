@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductViewCell: UITableViewCell {
     
-    static let kId = "ProductsTableViewCell"
+    static let kId = "ProductViewCell"
 
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
