@@ -24,7 +24,7 @@
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lC3-4o-uEw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3PH-X9-4El"/>
                             <constraint firstItem="lC3-4o-uEw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CfK-qh-Ue1"/>
@@ -66,8 +66,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

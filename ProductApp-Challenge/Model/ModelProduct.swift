@@ -24,11 +24,31 @@ struct Drinks: Codable {
     
     struct ResultDrinks: Codable {
         var strDrink: String
+        var strDrinkThumb: String
+        var strCategory: String
+        var strAlcoholic: String
+        var strGlass: String
+        var strInstructions: String
+        var strInstructionsES:String
         
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
       
             self.strDrink = try container.decode(String.self, forKey: .strDrink)
+            
+            self.strDrinkThumb = try container.decode(String.self, forKey: .strDrinkThumb)
+            
+            self.strCategory = try container.decode(String.self, forKey: .strCategory)
+            
+            self.strAlcoholic = try container.decode(String.self, forKey: .strAlcoholic)
+            
+            self.strGlass = try container.decode(String.self, forKey: .strGlass)
+            
+            self.strInstructions = try container.decode(String.self, forKey: .strInstructions)
+            
+            self.strInstructionsES = try container.decode(String.self, forKey: .strInstructionsES)
+            
+            
             
       //            if let id = try? container.decode(Int.self, forKey: .id){
       //                self.id = id
