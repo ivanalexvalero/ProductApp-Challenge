@@ -7,7 +7,7 @@ target 'ProductApp-Challenge' do
 
   # Pods for ProductApp-Challenge
 
-  pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'SkeletonView'
 
 end

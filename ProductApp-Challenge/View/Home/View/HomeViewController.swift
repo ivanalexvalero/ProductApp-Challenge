@@ -46,7 +46,6 @@ class HomeViewController: UIViewController {
         ConfigTableView()
         
         filteredList = drinksList
-        
 
         initSearchController()
         
@@ -65,6 +64,8 @@ class HomeViewController: UIViewController {
         tableViewProducts.dataSource = self
         tableViewProducts.register(UINib(nibName: ProductViewCell.kId, bundle: nil), forCellReuseIdentifier: ProductViewCell.kId)
         tableViewProducts.reloadData()
+        tableViewProducts.separatorColor = .clear
+        
     }
     
     func initSearchController() {
@@ -167,7 +168,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableViewProducts.dequeueReusableCell(withIdentifier: ProductViewCell.kId, for: indexPath) as? ProductViewCell else {
                 return UITableViewCell()
             }
-        cell.SetUpCell(model: prod[indexPath.row])
+            
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+//                cell.SetUpCell(model: prod[indexPath.row])
+//            }
+            cell.SetUpCell(model: prod[indexPath.row])
+        
             print("cell")
             return cell
         }
@@ -212,6 +218,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(vc, animated: true)
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90.0
     }
     
 }
