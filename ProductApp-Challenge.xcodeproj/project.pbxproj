@@ -29,6 +29,8 @@
 		4F4E729928B57C23002D8C4F /* ModelProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4E729828B57C23002D8C4F /* ModelProduct.swift */; };
 		4F4E729C28B57D25002D8C4F /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4E729A28B57D25002D8C4F /* DetailProductViewController.swift */; };
 		4F4E729D28B57D25002D8C4F /* DetailProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4E729B28B57D25002D8C4F /* DetailProductViewController.xib */; };
+		4F55B9D628BBFE2F00EF6EE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F55B9D528BBFE2E00EF6EE4 /* GoogleService-Info.plist */; };
+		4F55B9D928BC1DF000EF6EE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F55B9D828BC1DF000EF6EE4 /* LoginViewController.swift */; };
 		4FA99A0428B6BC1400E47338 /* ModelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA99A0328B6BC1400E47338 /* ModelText.swift */; };
 		4FB48CFE28B598D400251B81 /* ApiRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB48CFD28B598D400251B81 /* ApiRestService.swift */; };
 		4FB48D0128B59ED500251B81 /* RepositoryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB48D0028B59ED500251B81 /* RepositoryApi.swift */; };
@@ -64,6 +66,8 @@
 		4F4E729828B57C23002D8C4F /* ModelProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProduct.swift; sourceTree = "<group>"; };
 		4F4E729A28B57D25002D8C4F /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		4F4E729B28B57D25002D8C4F /* DetailProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProductViewController.xib; sourceTree = "<group>"; };
+		4F55B9D528BBFE2E00EF6EE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../XcodeProjects/Challenge/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F55B9D828BC1DF000EF6EE4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4FA99A0328B6BC1400E47338 /* ModelText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelText.swift; sourceTree = "<group>"; };
 		4FB48CFD28B598D400251B81 /* ApiRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRestService.swift; sourceTree = "<group>"; };
 		4FB48D0028B59ED500251B81 /* RepositoryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryApi.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		4F182B9528B6A7D5008790D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4F4E728628B56D4C002D8C4F /* CustomCell */,
 				4F4E729328B578A3002D8C4F /* HomeViewController.swift */,
 				4F4E729428B578A3002D8C4F /* HomeViewController.xib */,
 			);
@@ -177,6 +182,7 @@
 				4F4E727528B5688A002D8C4F /* Main.storyboard */,
 				4F4E727828B5688E002D8C4F /* Assets.xcassets */,
 				4F4E727A28B5688E002D8C4F /* LaunchScreen.storyboard */,
+				4F55B9D528BBFE2E00EF6EE4 /* GoogleService-Info.plist */,
 				4F4E727D28B5688E002D8C4F /* Info.plist */,
 			);
 			path = "ProductApp-Challenge";
@@ -185,9 +191,9 @@
 		4F4E728328B568DA002D8C4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4F55B9D728BC1D9100EF6EE4 /* Login */,
 				4F182B9328B6A7C1008790D2 /* Home */,
 				4F9202EA28B8054F00B22666 /* DetailProduct */,
-				4F4E728628B56D4C002D8C4F /* CustomCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +222,14 @@
 				4FA99A0328B6BC1400E47338 /* ModelText.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4F55B9D728BC1D9100EF6EE4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4F55B9D828BC1DF000EF6EE4 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		4F9202EA28B8054F00B22666 /* DetailProduct */ = {
@@ -332,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F4E729228B57687002D8C4F /* ProductViewCell.xib in Resources */,
+				4F55B9D628BBFE2F00EF6EE4 /* GoogleService-Info.plist in Resources */,
 				4F4E727C28B5688E002D8C4F /* LaunchScreen.storyboard in Resources */,
 				4F4E729D28B57D25002D8C4F /* DetailProductViewController.xib in Resources */,
 				4F4E727928B5688E002D8C4F /* Assets.xcassets in Resources */,
@@ -398,6 +413,7 @@
 				4F4E729528B578A3002D8C4F /* HomeViewController.swift in Sources */,
 				4FB48D0128B59ED500251B81 /* RepositoryApi.swift in Sources */,
 				4FB48CFE28B598D400251B81 /* ApiRestService.swift in Sources */,
+				4F55B9D928BC1DF000EF6EE4 /* LoginViewController.swift in Sources */,
 				4F182B9228B6A54A008790D2 /* RequestModel.swift in Sources */,
 				4F182B8928B6A03B008790D2 /* MainViewController.swift in Sources */,
 				4F4E729928B57C23002D8C4F /* ModelProduct.swift in Sources */,
