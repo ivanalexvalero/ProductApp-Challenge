@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailProductViewController" customModule="ProductApp_Challenge" customModuleProvider="target">
+            <connections>
+                <outlet property="alcoholicLabel" destination="d4X-Zk-HNg" id="ZeN-3f-QGV"/>
+                <outlet property="categoryLabel" destination="7AQ-AJ-8Xu" id="7Y2-OD-rd6"/>
+                <outlet property="drinkImage" destination="zlC-xS-gGg" id="Ifr-C1-I5i"/>
+                <outlet property="glassLabel" destination="CH8-SI-Fun" id="sCc-Ts-ceP"/>
+                <outlet property="instructionsENLabel" destination="Tra-0r-Tsg" id="VSd-ci-pB5"/>
+                <outlet property="instructionsESLabel" destination="KHJ-gL-R0J" id="4HN-Bp-s8D"/>
+                <outlet property="nameLabel" destination="iax-0T-wcg" id="OLK-kN-YPD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ip0-Ur-GSa">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-Ar-LaD">
+                            <rect key="frame" x="-8" y="0.0" width="427" height="1026"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVn-kH-XrC">
+                                    <rect key="frame" x="0.0" y="0.0" width="427" height="450"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zlC-xS-gGg">
+                                            <rect key="frame" x="0.0" y="44" width="427" height="408.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="zlC-xS-gGg" secondAttribute="height" multiplier="208:199" id="nc4-PR-psH"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="zlC-xS-gGg" firstAttribute="top" secondItem="TVn-kH-XrC" secondAttribute="top" constant="44" id="HFL-89-9pp"/>
+                                        <constraint firstAttribute="height" constant="450" id="IZp-Ib-rMn"/>
+                                        <constraint firstAttribute="trailing" secondItem="zlC-xS-gGg" secondAttribute="trailing" id="chP-fh-ddy"/>
+                                        <constraint firstItem="zlC-xS-gGg" firstAttribute="leading" secondItem="TVn-kH-XrC" secondAttribute="leading" id="rj5-Yr-Nz3"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w65-Sn-dOk">
+                                    <rect key="frame" x="0.0" y="466" width="427" height="560"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-Os-JrW">
+                                            <rect key="frame" x="16" y="0.0" width="395" height="544"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iax-0T-wcg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="395" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Di8-7c-kem"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AQ-AJ-8Xu">
+                                                    <rect key="frame" x="0.0" y="54" width="395" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="LSX-2m-T7F"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH8-SI-Fun">
+                                                    <rect key="frame" x="0.0" y="118" width="395" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="EQq-8v-7Up"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4X-Zk-HNg">
+                                                    <rect key="frame" x="0.0" y="182" width="395" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="LQH-a2-vpC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmC-bH-J4R">
+                                                    <rect key="frame" x="0.0" y="246" width="395" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="k3g-Qw-sFD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tra-0r-Tsg">
+                                                    <rect key="frame" x="0.0" y="300" width="395" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="0tG-IN-9MU"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="tL6-bZ-iOF"/>
+                                                    </constraints>
+                                                    <string key="text">InstructionEN: Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</string>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHJ-gL-R0J">
+                                                    <rect key="frame" x="0.0" y="424" width="395" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="Vhx-Gl-254"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="d6o-8x-30j"/>
+                                                    </constraints>
+                                                    <string key="text">InstructionES: Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</string>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tra-0r-Tsg" firstAttribute="top" secondItem="HmC-bH-J4R" secondAttribute="bottom" constant="4" id="iGO-LB-ext"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Rhv-Os-JrW" firstAttribute="leading" secondItem="w65-Sn-dOk" secondAttribute="leading" constant="16" id="Rbf-gI-3UZ"/>
+                                        <constraint firstAttribute="height" constant="560" id="TNs-6E-xAp"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rhv-Os-JrW" secondAttribute="trailing" constant="16" id="XnA-ls-jm9"/>
+                                        <constraint firstItem="Rhv-Os-JrW" firstAttribute="top" secondItem="w65-Sn-dOk" secondAttribute="top" id="hMV-Ap-3ym"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="e8E-Ar-LaD" firstAttribute="bottom" secondItem="wtR-jz-dTd" secondAttribute="bottom" id="4kW-DR-qxL"/>
+                        <constraint firstItem="e8E-Ar-LaD" firstAttribute="trailing" secondItem="wtR-jz-dTd" secondAttribute="trailing" constant="8" id="Hqz-Qw-Vvv"/>
+                        <constraint firstItem="e8E-Ar-LaD" firstAttribute="width" secondItem="s4E-e5-Vz9" secondAttribute="width" multiplier="1.0314" id="kZX-By-nFB"/>
+                        <constraint firstItem="wtR-jz-dTd" firstAttribute="leading" secondItem="e8E-Ar-LaD" secondAttribute="leading" constant="8" id="oAi-jr-N12"/>
+                        <constraint firstItem="e8E-Ar-LaD" firstAttribute="top" secondItem="wtR-jz-dTd" secondAttribute="top" id="ttK-kB-gHO"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="wtR-jz-dTd"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="s4E-e5-Vz9"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ip0-Ur-GSa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="38Z-Xk-DFj"/>
+                <constraint firstAttribute="bottom" secondItem="Ip0-Ur-GSa" secondAttribute="bottom" id="OTQ-rF-n13"/>
+                <constraint firstItem="Ip0-Ur-GSa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cpf-By-hzv"/>
+                <constraint firstItem="Ip0-Ur-GSa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iJq-DK-4Jq"/>
+                <constraint firstItem="Ip0-Ur-GSa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qdL-Go-7uN"/>
+            </constraints>
+            <point key="canvasLocation" x="153.62318840579712" y="64.955357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
