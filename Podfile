@@ -9,5 +9,7 @@ target 'ProductApp-Challenge' do
 
   pod 'Kingfisher'
   pod 'SkeletonView'
+  pod 'FirebaseAuth'
+  pod 'FirebaseAnalytics'
 
 end

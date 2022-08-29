@@ -10,8 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ProductApp_Challenge" customModuleProvider="target">
             <connections>
-                <outlet property="searchController" destination="Cy0-mT-q1d" id="For-dG-hVt"/>
-                <outlet property="tableViewProducts" destination="0Wr-qk-MmP" id="H8n-Ux-Csj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

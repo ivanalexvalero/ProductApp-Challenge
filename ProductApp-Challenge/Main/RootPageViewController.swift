@@ -28,7 +28,7 @@ class RootPageViewController: UIPageViewController {
 
     private func setupViewControllers() {
         subViewControllers = [
-            HomeViewController(),
+//            HomeViewController(),
         ]
         
         _ = subViewControllers.enumerated().map({$0.element.view.tag = $0.offset})
