@@ -38,7 +38,7 @@ class ProductViewCell: UITableViewCell {
         glassLabel.showAnimatedGradientSkeleton()
         glassLabel.linesCornerRadius = 8
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             if let imageUrl = model.strDrinkThumb as String?, let url = URL(string: "\(imageUrl)") {
                 self.productImage.kf.setImage(with: url)
             }

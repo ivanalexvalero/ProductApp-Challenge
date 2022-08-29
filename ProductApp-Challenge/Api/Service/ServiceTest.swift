@@ -32,26 +32,26 @@ class ServiceTest {
     }
     func ServiceApiTest() {
         
-        guard let path = Bundle.main.path(forResource: "drinks", ofType: "json") else { return }
-        
-//        let urlString = "www.thecocktaildb.com/api/json/v1/1/search.php?f=a"
-        let url = URL(fileURLWithPath: path)
-        
-        var drinks: Drinks?
-        
-        do {
-            let jsonData = try Data(contentsOf: url)
-            drinks = try JSONDecoder().decode(Drinks.self, from: jsonData)
-//            self.drinksList = drinks
-            if let drinks = drinks {
-                print(drinks)
-//                drinksList.first?.strDrink = drinks.drinks as String
-            } else {
-                print("Failed to pase")
-            }
-        } catch  {
-            print("Error: \(error)")
-        }
+//        guard let path = Bundle.main.path(forResource: "drinks", ofType: "json") else { return }
+//
+////        let urlString = "www.thecocktaildb.com/api/json/v1/1/search.php?f=a"
+//        let url = URL(fileURLWithPath: path)
+//
+//        var drinks: Drinks?
+//
+//        do {
+//            let jsonData = try Data(contentsOf: url)
+//            drinks = try JSONDecoder().decode(Drinks.self, from: jsonData)
+////            self.drinksList = drinks
+//            if let drinks = drinks {
+//                print(drinks)
+////                drinksList.first?.strDrink = drinks.drinks as String
+//            } else {
+//                print("Failed to pase")
+//            }
+//        } catch  {
+//            print("Error: \(error)")
+//        }
         
         
 //        URLSession.shared.dataTask(with: url) { (data, response, error) in
