@@ -7,6 +7,9 @@ target 'ProductApp-Challenge' do
 
   # Pods for ProductApp-Challenge
 
-  pod 'Alamofire'
+  pod 'Kingfisher'
+  pod 'SkeletonView'
+  pod 'FirebaseAuth'
+  pod 'FirebaseAnalytics'
 
 end
