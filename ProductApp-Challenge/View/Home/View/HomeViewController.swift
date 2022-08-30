@@ -8,6 +8,10 @@
 import UIKit
 import FirebaseAuth
 
+protocol HomeProtocol {
+    func showError(_ error: String, callback: (() -> Void)?)
+}
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var bodyLabel: UILabel!
@@ -37,7 +41,10 @@ class HomeViewController: UIViewController {
         Task {
             await presenter.getTextList()
         }
+        
+        
     }
+    
     
 
     private func ConfigTableView() {
@@ -274,10 +281,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             name = drink[indexPath.row].strDrink
             image = drink[indexPath.row].strDrinkThumb
             category = drink[indexPath.row].strCategory
-            glass = drink[indexPath.row].strGlass
-            alcoholic = drink[indexPath.row].strAlcoholic
-            instructions = drink[indexPath.row].strInstructions
-            instructionsES = drink[indexPath.row].strInstructionsES
+            glass = drink[indexPath.row].strGlass ?? ""
+            alcoholic = drink[indexPath.row].strAlcoholic ?? ""
+            instructions = drink[indexPath.row].strInstructions ?? ""
+            instructionsES = drink[indexPath.row].strInstructionsES ?? ""
             
             let vc = DetailProductViewController(name: name, image: image, category: category, glass: glass, alcoholic: alcoholic, instructions: instructions, instructionsES: instructionsES)
             
@@ -328,5 +335,30 @@ class LogOurApp {
         }))
         
         viewController.present(buttonAlert, animated: true, completion: nil)
+    }
+}
+
+
+extension HomeViewController {
+    func showError(_ error: String, callback: (() -> Void)?) {
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { action in
+            if action.style == .default {
+                if let callback = callback {
+                    callback()
+                }
+                print("retry button pressed")
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { action in
+            if action.style == .cancel {
+                print("ok button pressed")
+            }
+        }))
+        
+        present(alert, animated: true)
+        
     }
 }

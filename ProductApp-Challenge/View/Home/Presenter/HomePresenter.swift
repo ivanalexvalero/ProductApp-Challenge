@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HomeViewProtocol: AnyObject{
+protocol HomeViewProtocol: AnyObject, HomeProtocol{
     func getData(list: [[Drinks.ResultDrinks]])
 }
 
@@ -20,6 +20,11 @@ protocol HomeViewProtocol: AnyObject{
     init(delegate: HomeViewProtocol ,provider: HomeProviderProtocol = HomeProvider()) {
         self.provider = provider
         self.delegate = delegate
+        #if DEBUG
+        if MockManager.shared.runAppWithMock {
+            self.provider = HomeProviderMock()
+        }
+        #endif
     }
     
 //    func getList() async {
@@ -48,7 +53,12 @@ protocol HomeViewProtocol: AnyObject{
             delegate?.getData(list: drinkList)
             
         } catch {
-            print(error)
+            delegate?.showError(error.localizedDescription, callback: {
+                Task { [weak self] in
+                    await self?.getTextList()
+                }
+            })
+            
         }
     }
 }

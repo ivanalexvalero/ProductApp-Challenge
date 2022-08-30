@@ -36,7 +36,7 @@ extension NetworkError: LocalizedError {
         case .jsonDecoder:
             return NSLocalizedString("failed to read the json and could not decode", comment: "")
         case .unauthorized:
-            return NSLocalizedString("", comment: "")
+            return NSLocalizedString("The session ended, re-starting", comment: "")
         }
     }
 }
