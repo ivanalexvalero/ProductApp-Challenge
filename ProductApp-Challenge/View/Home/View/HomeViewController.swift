@@ -342,16 +342,16 @@ class LogOurApp {
 extension HomeViewController {
     func showError(_ error: String, callback: (() -> Void)?) {
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { action in
-            if action.style == .default {
-                if let callback = callback {
+        if let callback = callback {
+            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { action in
+                if action.style == .default {
+                    
                     callback()
+                    
+                    print("retry button pressed")
                 }
-                print("retry button pressed")
-            }
-        }))
-        
+            }))
+        }
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { action in
             if action.style == .cancel {
                 print("ok button pressed")
