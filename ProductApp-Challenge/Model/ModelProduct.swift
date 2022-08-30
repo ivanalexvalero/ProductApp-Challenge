@@ -26,10 +26,10 @@ struct Drinks: Codable {
         var strDrink: String
         var strDrinkThumb: String
         var strCategory: String
-        var strAlcoholic: String
-        var strGlass: String
-        var strInstructions: String
-        var strInstructionsES:String
+        var strAlcoholic: String?
+        var strGlass: String?
+        var strInstructions: String?
+        var strInstructionsES:String?
         
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -40,15 +40,26 @@ struct Drinks: Codable {
             
             self.strCategory = try container.decode(String.self, forKey: .strCategory)
             
-            self.strAlcoholic = try container.decode(String.self, forKey: .strAlcoholic)
             
-            self.strGlass = try container.decode(String.self, forKey: .strGlass)
-            
-            self.strInstructions = try container.decode(String.self, forKey: .strInstructions)
-            
-            self.strInstructionsES = try container.decode(String.self, forKey: .strInstructionsES)
-            
-            
+            if let strAlcoholic = try? container.decode(String.self, forKey: .strAlcoholic){
+                self.strAlcoholic = strAlcoholic
+            }else {
+                self.strAlcoholic = nil
+            }
+            if let strGlass = try? container.decode(String.self, forKey: .strGlass){
+                self.strGlass = strGlass
+            }else {
+                self.strGlass = nil
+            }
+            if let strInstructions = try? container.decode(String.self, forKey: .strInstructions){
+                self.strInstructions = strInstructions
+            }else {
+                self.strInstructions = nil
+            }
+            if let strInstructionsES = try? container.decode(String.self, forKey: .strInstructionsES){
+                self.strInstructionsES = strInstructionsES
+            }else {
+                self.strInstructionsES = nil
             
       //            if let id = try? container.decode(Int.self, forKey: .id){
       //                self.id = id
@@ -57,7 +68,7 @@ struct Drinks: Codable {
                   }
     }
 }
-
+}
 
 
 //{

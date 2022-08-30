@@ -54,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ro7-oI-26h">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ro7-oI-26h" customClass="StyleCellView" customModule="ProductApp_Challenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="270" width="414" height="366"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7hB-cK-Yix">
@@ -109,6 +109,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="7hB-cK-Yix" secondAttribute="bottom" constant="8" id="2nC-Ie-EPN"/>
                                     <constraint firstItem="7hB-cK-Yix" firstAttribute="leading" secondItem="Ro7-oI-26h" secondAttribute="leading" constant="16" id="DUE-Of-86k"/>
@@ -118,7 +119,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oG9-IX-V1I"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ro7-oI-26h" firstAttribute="centerX" secondItem="oG9-IX-V1I" secondAttribute="centerX" id="Ocu-LT-FEU"/>
                             <constraint firstItem="Ro7-oI-26h" firstAttribute="width" secondItem="Ke7-sY-Ijt" secondAttribute="width" id="fLk-4n-5Uz"/>
@@ -234,9 +235,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,27 +8,36 @@
 import Foundation
 
 struct RequestModel {
+    var routeValue: RouteValue?
     let endpoint: Endpoints
     var queryItems: [String:String]?
     let httpMethod: HttpMethod = .GET
     var baseUrl: URLBase = .drinks
-//    let route: Route
-
-//    enum Route {
+  
 //
-//        case details(String)
-//        case noneId
+//        var description: String {
+//            getLetter()
+//        }
+//        func getLetter() -> String {
+//            let xs = (0..<26).map({Character(UnicodeScalar("a".unicodeScalars.first!.value + $0) ?? "a")})
+//            let fr = "\(xs)"
+//            return fr
+//        }
 //
+////
 //
 //        var description: String {
 //            switch self {
-//            case .details(let detailsId):
-//                return "/\(detailsId)"
+//            case .details:
+//                let xs = (0..<26).map({Character(UnicodeScalar("a".unicodeScalars.first!.value + $0) ?? "a")})
+//                return "\(xs)"
 //            case .noneId:
 //                return ""
 //            }
 //        }
 //    }
+//
+    
 
     
     func getURL() -> String {
