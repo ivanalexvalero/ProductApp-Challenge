@@ -1,5 +1,8 @@
 # ProductApp-Challenge
 
+[![Apple](https://img.shields.io/badge/iOS-999999?style=for-the-badge&logo=apple&logoColor=white&labelColor=101010)]()
+[![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white&labelColor=101010)]()
+[![Xcode](https://img.shields.io/badge/Xcode-1575F9?style=for-the-badge&logo=xcode&logoColor=white&labelColor=101010)]()
 
 El objetivo de esta etapa de la entrevista es desarrollar una app utilizando una API, que le permita a un usuario ver los detalles de un producto.
 
@@ -10,6 +13,9 @@ La app debería contar con tres funcionalidades:
  - Búsqueda
  - Visualización de resultados de la búsqueda
  - Detalle del resultado 
+
+##### Datos de API: 
+ API: [https://www.thecocktaildb.com/api.php?ref=apilist.fun](https://www.thecocktaildb.com/api.php?ref=apilist.fun)
 
 
 #### Requerimientos:
