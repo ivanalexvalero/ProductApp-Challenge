@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>466885129285-vc5at4bu9isdc4389l6mmjt7uq2llde0.apps.googleusercontent.com</string>
+	<string>936841487554-sihfgko4m98rp8h0i6lki73l9sbroldd.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.466885129285-vc5at4bu9isdc4389l6mmjt7uq2llde0</string>
+	<string>com.googleusercontent.apps.936841487554-sihfgko4m98rp8h0i6lki73l9sbroldd</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD_5WVSwXn22VjVy9XXmMYQLDkKchNP81s</string>
+	<string>AIzaSyBsIdIcZVLqVcXfYfupI_uK6-A0_2ND2Jc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>466885129285</string>
+	<string>936841487554</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.valeroivan.FirabaseConfi</string>
+	<string>valeroIvan.ProductApp-Challenge</string>
 	<key>PROJECT_ID</key>
-	<string>fir-confi-3d029</string>
+	<string>productapp-challenge</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-confi-3d029.appspot.com</string>
+	<string>productapp-challenge.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:466885129285:ios:2103afa2f11e914fa25f2c</string>
+	<string>1:936841487554:ios:bf749e9887d25570a5475b</string>
 </dict>
 </plist>
