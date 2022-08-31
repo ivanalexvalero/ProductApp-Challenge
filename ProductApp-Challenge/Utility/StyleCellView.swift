@@ -13,7 +13,7 @@ class StyleCellView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         SetupView()
-    }
+    } 
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
