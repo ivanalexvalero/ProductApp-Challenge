@@ -33,7 +33,6 @@
 		4F55B9D928BC1DF000EF6EE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F55B9D828BC1DF000EF6EE4 /* LoginViewController.swift */; };
 		4F6D112828BE9D2100541557 /* ProductApp_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D112728BE9D2100541557 /* ProductApp_ChallengeTests.swift */; };
 		4F6D112F28BE9E1600541557 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D112E28BE9E1600541557 /* HomePresenterTests.swift */; };
-		4F8F2D3D28BFB0020023B515 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F2D3C28BFB0020023B515 /* Test.swift */; };
 		C081EDEA97B863B5E4AF6B1E /* Pods_ProductApp_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413E0ED7E778189E8D584BDE /* Pods_ProductApp_Challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +79,6 @@
 		4F6D112528BE9D2100541557 /* ProductApp-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ProductApp-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6D112728BE9D2100541557 /* ProductApp_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductApp_ChallengeTests.swift; sourceTree = "<group>"; };
 		4F6D112E28BE9E1600541557 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
-		4F8F2D3C28BFB0020023B515 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				4F4E729828B57C23002D8C4F /* ModelProduct.swift */,
-				4F8F2D3C28BFB0020023B515 /* Test.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -445,7 +442,6 @@
 				4F182B9028B6A536008790D2 /* NetworkError.swift in Sources */,
 				4F182B9828B6A822008790D2 /* HomePresenter.swift in Sources */,
 				4F4E727028B5688A002D8C4F /* AppDelegate.swift in Sources */,
-				4F8F2D3D28BFB0020023B515 /* Test.swift in Sources */,
 				4F21BD9F28BD79C0008B755D /* Utils.swift in Sources */,
 				4F4E727228B5688A002D8C4F /* SceneDelegate.swift in Sources */,
 				4F21BD9B28BD78BB008B755D /* MockManager.swift in Sources */,
