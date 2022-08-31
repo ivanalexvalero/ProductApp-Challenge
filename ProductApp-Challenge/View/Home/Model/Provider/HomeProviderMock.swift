@@ -8,7 +8,13 @@
 import Foundation
 
 class HomeProviderMock: HomeProviderProtocol {
-    func getText() async throws -> Drinks {
+    var throwError: Bool = false
+    
+    func getDrinks() async throws -> Drinks {
+        if throwError {
+            throw NetworkError.generic
+        }
+        
         guard let model = Utils.parseJson(jsonName: "drinks") else {
             throw NetworkError.jsonDecoder
         }
