@@ -27,26 +27,12 @@ protocol HomeViewProtocol: AnyObject, HomeProtocol{
         #endif
     }
     
-//    func getList() async {
-//        drinkList.removeAll()
-//        
-//        do {
-//            let drinks = try await provider.getDrinks().drinks
-//            
-//            drinkList.append(drinks)
-//            
-//            delegate?.getData(list: drinkList)
-//            
-//        } catch {
-//            print(error)
-//        }
-//    }
     
-    func getTextList() async {
+    func getDrinkList() async {
         drinkList.removeAll()
         
         do {
-            let listText = try await provider.getText()
+            let listText = try await provider.getDrinks()
             
             drinkList.append(listText.drinks)
             
@@ -55,7 +41,7 @@ protocol HomeViewProtocol: AnyObject, HomeProtocol{
         } catch {
             delegate?.showError(error.localizedDescription, callback: {
                 Task { [weak self] in
-                    await self?.getTextList()
+                    await self?.getDrinkList()
                 }
             })
             
