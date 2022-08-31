@@ -8,36 +8,11 @@
 import Foundation
 
 struct RequestModel {
-    var routeValue: RouteValue?
+//    var routeValue: RouteValue?
     let endpoint: Endpoints
     var queryItems: [String:String]?
     let httpMethod: HttpMethod = .GET
     var baseUrl: URLBase = .drinks
-  
-//
-//        var description: String {
-//            getLetter()
-//        }
-//        func getLetter() -> String {
-//            let xs = (0..<26).map({Character(UnicodeScalar("a".unicodeScalars.first!.value + $0) ?? "a")})
-//            let fr = "\(xs)"
-//            return fr
-//        }
-//
-////
-//
-//        var description: String {
-//            switch self {
-//            case .details:
-//                let xs = (0..<26).map({Character(UnicodeScalar("a".unicodeScalars.first!.value + $0) ?? "a")})
-//                return "\(xs)"
-//            case .noneId:
-//                return ""
-//            }
-//        }
-//    }
-//
-    
 
     
     func getURL() -> String {
@@ -53,13 +28,11 @@ struct RequestModel {
 //        /random.php
 //        /search.php?f=a
         case drinks = "/search.php?f=a"
-        case text = "/posts"
         case empty = ""
     }
     
     enum URLBase: String {
         case drinks = "https://www.thecocktaildb.com/api/json/v1/1"
-//        case text = "https://jsonplaceholder.typicode.com"
     }
     
     

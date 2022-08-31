@@ -23,7 +23,6 @@ class HomeViewController: UIViewController {
     
     var drinksList: [[Drinks.ResultDrinks]] = []
     var filteredList: [[Drinks.ResultDrinks]] = []
-    var serviceTest = ServiceTest()
     var searching = false
     
     override func viewDidLoad() {
@@ -32,20 +31,15 @@ class HomeViewController: UIViewController {
         title = "Drinks"
         
         ConfigTableView()
-        
         filteredList = drinksList
-
         initSearchController()
         
-        serviceTest.ServiceApiTest()
         Task {
-            await presenter.getTextList()
+            await presenter.getDrinkList()
         }
         
         
     }
-    
-    
 
     private func ConfigTableView() {
         tableViewProducts.delegate = self
@@ -75,29 +69,6 @@ class HomeViewController: UIViewController {
     
 }
 
-//extension HomeViewController: UISearchBarDelegate {
-////    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-//////        filterContentForSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
-////    }
-////    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-////
-////        filteredList = []
-////
-////        if  searchText == "" {
-////
-////            filteredList = drinksList
-////        }
-////        for word in drinksList {
-////            if ((word.first?.strDrink.uppercased().contains(searchText.uppercased())) != nil) {
-////                filteredList.append(word)
-////            }
-////        }
-////
-////
-////
-////    }
-//}
-
 extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         
@@ -108,14 +79,14 @@ extension HomeViewController: UISearchResultsUpdating {
             filteredList.removeAll()
             filteredList = drinksList.map( { (test) -> [Drinks.ResultDrinks] in
             
-                            test.filter { (test2) in
-                                let nameDrink = test2.strDrink.lowercased().contains(searchText.lowercased())
-                                print("Namedrink", nameDrink)
+                test.filter { (test2) in
+                    let nameDrink = test2.strDrink.lowercased().contains(searchText.lowercased())
+    
                                 
-                                return nameDrink
+                    return nameDrink
 
-                            }
-                        } )
+                    }
+            } )
         } else {
             searching = false
             filteredList.removeAll()
@@ -130,62 +101,12 @@ extension HomeViewController: UISearchResultsUpdating {
         tableViewProducts.reloadData()
     }
 }
-//extension HomeViewController: UISearchBarDelegate, UISearchResultsUpdating {
-//    func updateSearchResults(for searchController: UISearchController) {
-//        guard let text = searchController.searchBar.text else {
-//            return
-//        }
-//
-//        print("text", text)
-//
-//    }
-//
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//
-//        filteredList = []
-//
-//        if searchText == "" {
-//            checkSearchBar = false
-//            filteredList = drinksList
-//        } else {
-//            filteredList = drinksList.map( { (test) -> [Drinks.ResultDrinks] in
-//
-//                test.filter { (test2) in
-//                    let nameDrink = test2.strDrink.lowercased().contains(searchText.lowercased())
-//                    print("Namedrink", nameDrink)
-//                    checkSearchBar = true
-//                    return nameDrink
-//
-//
-////                    let authorsAndBooks = authors.map { (authorName) -> (String, [Book]) in (authorName, allBooks.filter({ $0.author == authorName })) }
-//
-//
-//                }
-//            } )
-//
-//        }
-//
-//        self.tableViewProducts.reloadData()
-//
-//    }
-//
-//}
 
-//extension HomeViewController: UISearchResultsUpdating {
-//    func updateSearchResults(for searchController: UISearchController) {
-//        guard let text = searchController.searchBar.text else { return }
-//
-//        print(text)
-//    }
-//}
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if (checkSearchBar == true) {
-//            return filteredList[section].count
-//        }
         if searching {
             
             return filteredList[section].count
@@ -198,9 +119,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-//        if (checkSearchBar == true) {
-//            return filteredList.count
-//        }
         if searching {
             
             return filteredList.count
@@ -212,15 +130,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        if (checkSearchBar == true) {
-//            let data = filteredList[indexPath.section]
-//        }
-        
-//        if isFiltering() {
-//            let data = filteredList[indexPath.section]
-//
-//        }
-        
         let currentDrink: [Drinks.ResultDrinks]
         
         if searching {
@@ -228,42 +137,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             currentDrink = drinksList[indexPath.section]
         }
-//
+
         let data = currentDrink
         if let prod = data as? [Drinks.ResultDrinks] {
         guard let cell = tableViewProducts.dequeueReusableCell(withIdentifier: ProductViewCell.kId, for: indexPath) as? ProductViewCell else {
                 return UITableViewCell()
             }
-            
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-//                cell.SetUpCell(model: prod[indexPath.row])
-//            }
-            
-        
-            
-            
+      
             cell.SetUpCell(model: prod[indexPath.row])
-            cell.productNameLabel.text = prod[indexPath.row].strDrink
-            print(currentDrink.first?.strDrink)
+//            cell.productNameLabel.text = prod[indexPath.row].strDrink
              
-        
-//            print("cell")
             return cell
         }
         return UITableViewCell()
-        
-        
-//        guard let cell = tableViewProducts.dequeueReusableCell(withIdentifier: ProductViewCell.kId, for: indexPath) as? ProductViewCell else { return UITableViewCell() }
-//        cell.SetUpCell(model: drinksList[indexPath.row])
-//        return cell
-//
-        
-//
-//        let data = drinksList[indexPath.section]
-//        let cell = tableViewProducts.dequeueReusableCell(withIdentifier: ProductViewCell.kId, for: indexPath) as? ProductViewCell
-//        cell.SetUpCell(model: data[indexPath.row])
-//
-//        return cell
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -307,8 +194,6 @@ extension HomeViewController: HomeViewProtocol {
     }
 }
 
-
-
 class LogOurApp {
     
     static func logOutButton(viewController: UIViewController) {
@@ -331,7 +216,7 @@ class LogOurApp {
         }))
         
         buttonAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction) in
-            print("logout to app")
+//            print("logout to app")
         }))
         
         viewController.present(buttonAlert, animated: true, completion: nil)
